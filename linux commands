@@ -1,0 +1,126 @@
+Linux Commands
+
+
+$ pwd  						    // Show current folder	
+$ cat <File name>				// read the file
+$ touch <File name>				// Create the file
+$ mkdir < Folder Name>			// create the folder
+$ chmod 777 <File /Folder Name> // Change the permissions
+$ nano <File name>				// create or edit existing file
+$ vi <File name>     			 // Same as above
+$ find / -name <File name> 		// search the file
+$ grep -i <search words> 		 // search the relavent words for files
+$ echo <text here>  			// print the text return in the statement
+$ set +o <Servie name>         // enable the service to run
+$ set -o <Servie name> 			// Disable the service to run
+$ unset <text> 					// Remove the delaration of text (eg: text = 20,) it removes the defined 	
+$ export x=20						// make x value global
+$ expr --version				// calculation tool
+$ expr 2 + 3        //Result 5   // to add to numbers
+$ expr 2 \* 3		// Result 6  // to multiply (use  \ to use it)
+$ expr 4 \/ 2       // Result 2  // for division
+$ expr length <abc> // Result 3  // Show the length of string
+
+
+
+Folder 
+
+/bin   // user command binary
+/etc   // configuration files for system
+/sbin  // essential system binaries
+/usr   // user application support data and binaries
+	/usr/bin
+	/usr/include
+	/usr/lib
+	/usr/local
+		/local/bin
+		/local/lib
+		/local/man
+		/local/sbin
+		/local/share
+	/usr/share
+/var				// variable data files
+	/var/cache
+	/var/lib
+	/var/lock
+	/var/log
+	/var/opt
+	/var/tmp
+/dev				// device files
+/home				// user home directory
+/lib				// libraries and kernel modules
+/mnt				// mount files for temporary
+/opt				// optional software application
+/proc				// process and kernel info files
+/root				// home dir. for the root user
+
+----Chmod usinf + and -
+chmod u+x <file name>   // execution permission for all
+chmod u-x <file name>   // remove execution permission
+
+----Chmod using numbers 4 2 1
+chmod 722 <file name>   // execution permission for admin only
+chmod 177 <file name>   // execution permission for group and user only  
+
+$ sudo goupadd <name of group>
+$ sudo chown username:groupname <filename>
+$ sudo gpasswd -a username groupname
+
+-----Read a file
+$ head <filename>   //show first 10 lines in file
+$ tail <filename>	//show last 10 lines in file
+
+----Copy files and move/rename
+$ cp <source path of file> <destination path of file>
+$ cp -Rv <folder name> <destination path>
+$ scp <source path of file> user@IP:<destination path of file>
+
+$ mv <source path of file> <destination path of file>
+
+-----Remove file
+$ rm <file name> <file name> <file name>
+$ rm *.extension
+
+------Check the disks and memory check
+$ df 
+$ top
+$ free
+
+----- user creation and access levels
+cat /etc/passwd
+# adduser <user name>
+# passwd <existing user name>
+# chage -l <user name >
+# adduser -c "Tag" <user name>				// make a tag to user
+# useradd -e 2021-02-15 <user name>        // expire user
+# useradd -e 2021-02-15 -f <no of days> <User Name>  // expire passwd
+# useradd -u 110019 <user name>  // create using UID
+# userdel <user name>
+# useradd -d /root<path><foldername> <user name>   // creating using and defined home folder
+# useradd -s /sbin/nologin <user name>  //only for ftp not to login to shell
+# useradd -u <give user id 4 digits> -g < give group id which was exits> <user name>
+# usermod -aG sudo <username>   // provid root privileges to user
+
+# setfacl -m u:<username>:rwx <Folder path>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
