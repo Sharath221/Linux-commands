@@ -20,7 +20,8 @@ $ expr 2 + 3        //Result 5   // to add to numbers
 $ expr 2 \* 3		// Result 6  // to multiply (use  \ to use it)
 $ expr 4 \/ 2       // Result 2  // for division
 $ expr length <abc> // Result 3  // Show the length of string
-
+$ apt update
+$ echo date
 
 
 Folder 
